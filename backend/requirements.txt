@@ -1,0 +1,15 @@
+flask
+flask-cors
+deep-translator
+langdetect
+transformers
+torch
+google-cloud-firestore
+google-auth
+Flask
+langdetect
+opencv-contrib-python
+numpy
+Pillow
+tensorflow
+keras

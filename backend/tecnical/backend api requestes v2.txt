@@ -1,0 +1,100 @@
+1. Client Layer — Flutter
+
+The mobile app triggers HTTP API requests using the http package.
+Requests may include text payloads, images, or metadata.
+
+POST /api/analyze
+Content-Type: application/json
+
+2. Routing Layer — Flask Blueprints
+
+All client traffic enters through a dedicated routing module:
+
+Validates request structure
+
+Delegates the workload to a corresponding service
+
+Handles route grouping and modular design
+
+Example:
+
+@main_bp.route("/analyze", methods=["POST"])
+def analyze():
+    data = request.json
+    return analyze_service.process(data)
+
+3. Service Layer
+
+This is the business logic layer.
+Responsibilities:
+
+Load ML models (NLP, CV) during app startup
+
+Preprocess input data
+
+Run inference
+
+Post-process outputs
+
+Compose clean responses
+
+This layer is the “brain” of the backend.
+
+4. Model Storage Layer
+
+All heavy ML assets are stored under:
+
+app/models/
+
+
+Advantages:
+
+Clear separation from code
+
+Easy deployment
+
+Centralized model management
+
+No accidental deletion/modification
+
+5. Configuration Layer
+
+config.py centralizes:
+
+Model paths
+
+Environment variables
+
+Application settings
+
+This ensures maintainability and eliminates hardcoded paths.
+
+6. Utility Layer
+
+utils/ provides:
+
+Reusable helper functions
+
+JSON formatting
+
+Exception handlers
+
+Image preprocessors
+
+Text cleaning tools
+
+Improves code clarity and reduces duplication.
+
+7. Execution Layer
+
+run.py launches the WSGI app:
+
+from app import create_app
+app = create_app()
+app.run()
+
+Final Pipeline Overview
+Flutter → Routes → Services → Models → Services → Routes → Flutter
+
+
+Each layer is independent and replaceable, enabling scalability, testing, and modular development.

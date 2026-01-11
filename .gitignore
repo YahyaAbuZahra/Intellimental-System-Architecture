@@ -1,0 +1,6 @@
+*.safetensors
+*.h5
+*.pth
+*.bin
+__pycache__/
+.venv/

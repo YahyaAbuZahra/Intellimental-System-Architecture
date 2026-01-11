@@ -1,0 +1,13 @@
+ملخص التنظيم
+
+منطق النماذج + الجلسات + التوصيات → في (services/model_service.py)
+
+دوال الـ helpers العامة للـ API → في (utils/helpers.py)
+
+كل الـ endpoints → في (routes/main_routes.py) داخل (Blueprint)
+
+إعداد الـ Flask app نفسه → في (__init__.py)
+
+ملف التشغيل فقط → (run.py)
+
+مسارات النماذج كـ config → في (config.py)

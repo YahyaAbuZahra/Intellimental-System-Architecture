@@ -1,0 +1,10 @@
+ipconfig
+
+
+
+cd C:\Users\lenovo\Desktop\backend
+.venv\Scripts\activate
+
+python run.py
+
+
