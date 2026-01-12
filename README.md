@@ -68,7 +68,7 @@ The system implements a modular microservices-patterned architecture, ensuring s
 </tr>
 <tr>
 <td><b>Inference Engine</b></td>
-<td>PyTorch, TensorFlow, Keras</td>
+<td>PyTorch, TensorFlow, Keras,OpenCV</td>
 <td>Tensor Computation, Feature Extraction, Classification</td>
 </tr>
 <tr style="background-color: #f6f8fa;">
